@@ -25,7 +25,8 @@ export default function Home(){
             <div className={styles.recomendados}>
                 {pratosRecomendados.map(item => (
                     <div key={item.id} className={styles.recomendado}>
-                        <div className={styles.recomendado__imagem}>
+                        <div className={styles.recomendado__imagem}
+                        onClick={() => redirectDetails(item)}>
                             <img src={item.photo} alt={item.title} />
                         </div>
                         <button 
